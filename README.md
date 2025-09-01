@@ -47,7 +47,7 @@ Am optat, în versiunea de față a traducerii, pentru *variante românești* al
 
 Pentru a compila *abaterile*, am operat mici modificări în fișierele **.rst** corespunzătoare. Găsirea lor se poate realiza ușor folosind scriptul **scripturi/modificari_rst.ps1** din acest proiect.
 
-Am optat, de asemeni, în versiunea de față a traducerii, să nu practic *neutralitatea de gen* pentru anumite cuvinte. Aceasta constituie o abatere de la [recomandarea oficială](https://devguide.python.org/documentation/translations/translating/#gender-neutrality). În plus, am practicat și transformarea în *substantiv comun* a unor nume proprii. Astfel, l-am preferat pe "Uite, frate Popescule, să lăsăm chestiile de principiu" lui "Uite, frate Popescu, să lăsăm chestiile de principiu".
+Am optat, de asemeni, în versiunea de față a traducerii, să nu practic *neutralitatea de gen* pentru anumite cuvinte. Aceasta constituie o abatere de la [recomandarea oficială](https://devguide.python.org/documentation/translations/translating/#gender-neutrality).
 
 ## Compilarea tutorialului
 
