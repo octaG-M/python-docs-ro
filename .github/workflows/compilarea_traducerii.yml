@@ -1,1 +1,42 @@
+name: Testarea manuala a traducerii HTML
+
+on:
+  workflow_dispatch:
+    inputs:
+      ramuraLuiCPython:
+        description: 'Ramura lui CPython'
+        required: true
+        type: choice
+        options:
+          - '3.13'
+          - '3.14' 
+          - latest
+
+jobs:
+  constructia-traducerii:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with: 
+          python-version: '3.13'
+      - uses: actions/checkout@v5
+        with:
+          repository: python/cpython
+          ref: ${{ inputs.ramuraLuiCPython }}
+      - run: make venv
+        working-directory: ./Doc
+      - uses: actions/checkout@v5
+        with:
+          repository: python/cpython
+          ref: ${{ inputs.ramuraLuiCPython }}
+      - run: git pull
+        working-directory: ./Doc/locales/ro/LC_MESSAGES
+      - uses: sphinx-doc/github-problem-matcher@v1.1
+      - run: make -e SPHINXOPTS="--color -D language='ro' -W --keep-going" html
+        working-directory: ./Doc
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: build-${{ inputs.ramuraLuiCPython }}-html
+          path: Doc/build/html
 
