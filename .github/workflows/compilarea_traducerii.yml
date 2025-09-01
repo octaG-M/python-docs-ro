@@ -1,5 +1,4 @@
 name: Construcția manuală a documentației în format HTML
-
 on:
   workflow_dispatch:
     inputs:
@@ -9,10 +8,9 @@ on:
         type: choice
         options:
           - '3.13'
+          - 'v3.13.7' # versiunea stabila 3.13 (vezi https://github.com/python/cpython/releases/tag/v3.13.7)
           - '3.14'
           - 'latest'
-          - 'v3.13.7' # versiunea stabila 3.13 (vezi https://github.com/python/cpython/releases/tag/v3.13.7)
-
 jobs:
   constructia-traducerii:
     runs-on: ubuntu-latest
