@@ -38,5 +38,5 @@ jobs:
         if: ${{ always() }}
         with:
           name: build-${{ inputs.ramuraLuiCPython }}-html
-          path: Doc/build/html
+          path: Doc/build
 
