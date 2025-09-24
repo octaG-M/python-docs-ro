@@ -18,7 +18,8 @@
 #
 # Utilizarea lui potodo din poutils: deschidem un terminal PowerShell in 
 # directorul fisierelor [ *.po ] si rulam comanda 
-# (vezi https://git.afpy.org/AFPy/potodo/src/branch/main/potodo/arguments_handling.py):
+# (vezi https://git.afpy.org/AFPy/potodo/src/branch/main/potodo/arguments_handling.py,
+#  respectiv https://git.afpy.org/AFPy/potodo/src/commit/a108154acf9afc5e4f386943da5a26ddd0c8ec6e/potodo/po_file.py#L71):
 #
 # potodo -c -f
 #
@@ -35,4 +36,5 @@ fisierul_po = polib.pofile('./numele_fisierului.po')
 for intrare in fisierul_po.fuzzy_entries():
     print(intrare.msgid, intrare.msgstr)
 for intrare in fisierul_po.untranslated_entries():
+
     print(intrare.msgid, intrare.msgstr)
