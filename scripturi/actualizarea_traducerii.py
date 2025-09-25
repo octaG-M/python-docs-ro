@@ -36,6 +36,6 @@ fisierul_po = polib.pofile('./numele_fisierului.po')
 for intrare in fisierul_po.fuzzy_entries():
     print(intrare.msgid, intrare.msgstr)
 for intrare in fisierul_po.untranslated_entries():
-
     print(intrare.msgid, intrare.msgstr)
+
 
